@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theodor Fagundes — Portfólio</title>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Ícones (usados em Matérias e Projetos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Fundo de partículas interativo, cobre o site inteiro (position:fixed) -->
+  <canvas id="universe"></canvas>
+
+  <!-- ================= HEADER / NAV FIXO ================= -->
+  <header>
+    <div class="logo"><span class="dot"></span>Theodor Fagundes</div>
+    <nav>
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#materias" class="nav-link" data-section="materias">Matérias</a>
+      <a href="#codigos" class="nav-link" data-section="codigos">Códigos e vídeo</a>
+      <a href="#projetos" class="nav-link" data-section="projetos">Projetos</a>
+      <a href="#reflexao" class="nav-link" data-section="reflexao">Anuais</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= 1. HOME (HERO) ================= -->
+    <section id="home" class="section-home">
+      <div class="stage">
+
+        <div class="profile">
+          <div class="avatar-block">
+            <img class="avatar" src="assets/fotopessoal.jpg" alt="Foto de perfil de Theodor Fagundes">
+            <span class="avatar-caption">Esse sou eu</span>
+          </div>
+
+          <div class="bio">
+            <span class="eyebrow">Turma 3º D — Informática</span>
+            <h1>Theodor Fagundes</h1>
+            <h2>Técnico em Informática, desenvolvedor e lutador.</h2>
+            <p>Sonho em crescer profissionalmente na área de tecnologia, busco graduações e conhecimento, quero conhecer
+              o mundo, realizar meus sonhos e ter a liberdade de ser quem sou.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="frame">
+            <img src="assets/capa.png" alt="Capa do álbum em destaque">
+          </div>
+          <span class="feature-caption">Sabotage</span>
+        </div>
+
+      </div>
+
+      <a href="#materias" class="scroll-hint" aria-label="Rolar para Matérias">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ================= 2. MATÉRIAS ================= -->
+    <section id="materias" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Matérias</h1>
+        <p>Conheça todas as disciplinas e os professores responsáveis por cada uma delas. Clique em um card para ver os
+          detalhes.</p>
+      </div>
+
+      <!-- Filtro de bimestre: define qual bimestre aparece nos cards e nos modais -->
+      <div class="bimestre-filter" role="group" aria-label="Filtrar por bimestre">
+        <span class="bimestre-filter-label"><i class="fa-regular fa-calendar"></i> Bimestre</span>
+        <button type="button" class="bimestre-btn is-active" data-bimestre="1" aria-pressed="true">1º</button>
+        <button type="button" class="bimestre-btn" data-bimestre="2" aria-pressed="false">2º</button>
+        <button type="button" class="bimestre-btn" data-bimestre="3" aria-pressed="false">3º</button>
+        <button type="button" class="bimestre-btn" data-bimestre="4" aria-pressed="false">4º</button>
+      </div>
+
+      <div class="cards cards-materias">
+
+        <!--
+        Cada card abre o modal com o mesmo id em data-modal.
+        Para editar o conteúdo de uma matéria, procure a seção
+        "MODAIS DE MATÉRIAS" mais abaixo neste arquivo.
+      -->
+
+        <button type="button" class="card matematica reveal" data-modal="modal-matematica" aria-haspopup="dialog">
+          <div class="icone"><i class="fa-solid fa-calculator"></i></div>
+          <h2>Matemática</h2>
+          <hr>
+          <p><i class="fa-regular fa-user"></i> Professor: Roumel</p>
+          <span class="card-hint">Ver <span class="js-bim-label">1º</span> bimestre <i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+
+        <button type="button" class="card linguagens reveal" data-modal="modal-linguagens" aria-haspopup="dialog">
+          <div class="icone"><i class="fa-regular fa-comments"></i></div>
+          <h2>Linguagens</h2>
+          <hr>
+          <p><i class="fa-regular fa-user"></i> Professoras: Milena e Islane</p>
+          <span class="card-hint">Ver <span class="js-bim-label">1º</span> bimestre <i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+
+        <button type="button" class="card humanas reveal" data-modal="modal-humanas" aria-haspopup="dialog">
+          <div class="icone"><i class="fa-solid fa-users"></i></div>
+          <h2>Humanas</h2>
+          <hr>
+          <p><i class="fa-regular fa-user"></i> Professores: Wilson e Paulo Nobre</p>
+          <span class="card-hint">Ver <span class="js-bim-label">1º</span> bimestre <i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+
+        <button type="button" class="card natureza reveal" data-modal="modal-natureza" aria-haspopup="dialog">
+          <div class="icone"><i class="fa-solid fa-leaf"></i></div>
+          <h2>Naturezas</h2>
+          <hr>
+          <p><i class="fa-regular fa-user"></i> Professores: Jeanynne, Marcos Alves e Marcos César</p>
+          <span class="card-hint">Ver <span class="js-bim-label">1º</span> bimestre <i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+
+        <button type="button" class="card informatica reveal" data-modal="modal-informatica" aria-haspopup="dialog">
+          <div class="icone"><i class="fa-solid fa-laptop-code"></i></div>
+          <h2>Informática</h2>
+          <hr>
+          <p><i class="fa-regular fa-user"></i> Professores: Carlos Wilton e Kleber Jose</p>
+          <span class="card-hint">Ver <span class="js-bim-label">1º</span> bimestre <i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ================= 2.5 CÓDIGOS ================= -->
+    <section id="codigos" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Códigos</h1>
+        <p>Espaço para exibir um vídeo em destaque e guardar trechos de código que eu queira compartilhar ou anotar.</p>
+      </div>
+
+      <div class="codigos-wrap">
+
+        <!-- Bloco de vídeo: cole um link (YouTube/Vimeo) e clique em Carregar -->
+        <div class="codigos-box video-box">
+          <h3><i class="fa-solid fa-video"></i> Vídeo</h3>
+
+          <div class="video-input-row">
+            <input type="text" id="videoLinkInput" placeholder="Cole aqui o link do vídeo (YouTube ou Vimeo)">
+            <button type="button" id="loadVideoBtn" class="botao-mini">Carregar</button>
+            <button type="button" id="clearVideoBtn" class="botao-mini"><i class="fa-regular fa-trash-can"></i>
+              Limpar</button>
+          </div>
+
+          <div class="video-frame" id="videoFrame">
+            <p class="video-placeholder"><i class="fa-solid fa-video"></i> Nenhum vídeo carregado ainda</p>
+          </div>
+        </div>
+
+        <!-- Bloco de código: um "bloco de notas" para colar/editar código -->
+        <div class="codigos-box code-box">
+          <h3><i class="fa-solid fa-code"></i> Bloco de código</h3>
+
+          <div class="code-toolbar">
+            <button type="button" id="copyCodeBtn" class="botao-mini"><i class="fa-regular fa-copy"></i> Copiar</button>
+            <button type="button" id="clearCodeBtn" class="botao-mini"><i class="fa-regular fa-trash-can"></i>
+              Limpar</button>
+          </div>
+
+          <textarea id="codeArea" class="code-textarea" spellcheck="false"
+            placeholder="Cole ou digite seu código aqui..."></textarea>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 3. PROJETOS ================= -->
+    <section id="projetos" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Projetos</h1>
+        <p>Principais projetos desenvolvidos pelos estudantes durante o ano letivo.</p>
+      </div>
+
+      <div class="cards cards-projetos">
+
+        <div class="card tecnologia reveal">
+          <div class="icone"><i class="fa-solid fa-microchip"></i></div>
+          <h2>Amostra Tecnológica</h2>
+          <hr>
+          <p>Evento dedicado à apresentação de projetos de tecnologia, programação, robótica e inovação desenvolvidos
+            pelos alunos.</p>
+          <button type="button" class="botao" data-modal="modal-tecnologia" aria-haspopup="dialog">Meu papel</button>
+        </div>
+
+        <div class="card festival reveal">
+          <div class="icone"><i class="fa-solid fa-palette"></i></div>
+          <h2>Festival de Arte e Cultura</h2>
+          <hr>
+          <p>Celebração da criatividade com apresentações artísticas, música, dança, teatro, literatura e exposições
+            culturais.</p>
+          <button type="button" class="botao" data-modal="modal-festival" aria-haspopup="dialog">Meu papel</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 4. LINHA DO TEMPO / REFLEXÃO ================= -->
+    <section id="reflexao" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Últimos detalhes</h1>
+        <p>Reflexões e aprendizados construídos ao longo do ano letivo.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="container left reveal">
+          <div class="content">
+            <h2>Reflexão Crítica</h2>
+            <ul>
+              <li><b>Aprendizado Acadêmico:</b> O que aprendeu com as experiências acadêmicas?</li>
+              <li><b>Aplicação Prática:</b> Como esse conhecimento pode ser aplicado na vida real?</li>
+              <li><b>Melhorias Necessárias:</b> Em quais pontos ainda preciso melhorar?</li>
+              <li><b>Sugestão Adicional:</b> Relembre momentos desafiadores e reflita sobre resiliência, paciência e
+                solução de problemas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container right reveal">
+          <div class="content">
+            <h2>Conexões Interdisciplinares</h2>
+            <ul>
+              <li><b>Relações Interdisciplinares:</b> Como os conteúdos vistos em sala se relacionam com outras
+                disciplinas ou áreas do conhecimento?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container left reveal">
+          <div class="content">
+            <h2>Aprendizados da Escola para a Vida</h2>
+            <ul>
+              <li><b>Reflexão sobre Experiências:</b> Como as experiências vividas na escola contribuirão para sua vida
+                em sociedade?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer reveal">
+    Portfólio Theodor Fagundes — 3° D — Informática.
+  </footer>
+
+  <!-- =====================================================================
+     MODAIS DE MATÉRIAS
+     Cada bloco abaixo é o "pop-up" que abre quando o card da matéria
+     é clicado. Para editar o texto de uma matéria, procure o título
+     dela (ex: "Matemática") e altere o conteúdo dentro de cada
+     <p class="modal-answer">...</p> — é ali que fica a sua resposta.
+     ===================================================================== -->
+
+  <!--Matemática-->
+  <div class="modal" id="modal-matematica" data-modal-panel>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-matematica-title">
+      <button type="button" class="modal-close" data-close aria-label="Fechar"><i
+          class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-calculator"></i></div>
+        <div>
+          <p class="modal-eyebrow">Matéria · <span class="js-bim-label">1º</span> bimestre</p>
+          <h2 id="modal-matematica-title">Matemática</h2>
+          <p class="modal-sub"><i class="fa-regular fa-user"></i> Professor: Roumel</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- 1º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="1">
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Matemática no 1º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 2º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="2" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Matemática no 2º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 3º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="3" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Matemática no 3º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 4º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="4" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Matemática no 4º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Matemática-->
+
+  <!--Linguagens-->
+
+
+  <div class="modal" id="modal-linguagens" data-modal-panel>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-linguagens-title">
+      <button type="button" class="modal-close" data-close aria-label="Fechar"><i
+          class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-regular fa-comments"></i></div>
+        <div>
+          <p class="modal-eyebrow">Matéria · <span class="js-bim-label">1º</span> bimestre</p>
+          <h2 id="modal-linguagens-title">Linguagens</h2>
+          <p class="modal-sub"><i class="fa-regular fa-user"></i> Professoras: Milena e Islane</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- 1º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="1">
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Linguagens no 1º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 2º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="2" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Linguagens no 2º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 3º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="3" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Linguagens no 3º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 4º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="4" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Linguagens no 4º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Linguagens-->
+
+  <!--Humanas-->
+
+  <div class="modal" id="modal-humanas" data-modal-panel>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-humanas-title">
+      <button type="button" class="modal-close" data-close aria-label="Fechar"><i
+          class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-users"></i></div>
+        <div>
+          <p class="modal-eyebrow">Matéria · <span class="js-bim-label">1º</span> bimestre</p>
+          <h2 id="modal-humanas-title">Humanas</h2>
+          <p class="modal-sub"><i class="fa-regular fa-user"></i> Professores: Wilson e Paulo Nobre</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- 1º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="1">
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Humanas no 1º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 2º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="2" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Humanas no 2º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 3º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="3" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Humanas no 3º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 4º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="4" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Humanas no 4º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Humanas-->
+
+  <!--Naturezas-->
+
+
+  <div class="modal" id="modal-natureza" data-modal-panel>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-natureza-title">
+      <button type="button" class="modal-close" data-close aria-label="Fechar"><i
+          class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-leaf"></i></div>
+        <div>
+          <p class="modal-eyebrow">Matéria · <span class="js-bim-label">1º</span> bimestre</p>
+          <h2 id="modal-natureza-title">Naturezas</h2>
+          <p class="modal-sub"><i class="fa-regular fa-user"></i> Professores: Jeanynne, Marcos Alves e Marcos César</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- 1º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="1">
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Naturezas no 1º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 2º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="2" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Naturezas no 2º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 3º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="3" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Naturezas no 3º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 4º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="4" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Naturezas no 4º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Naturezas-->
+
+  <!--Informática-->
+
+
+  <div class="modal" id="modal-informatica" data-modal-panel>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-informatica-title">
+      <button type="button" class="modal-close" data-close aria-label="Fechar"><i
+          class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-leaf"></i></div>
+        <div>
+          <p class="modal-eyebrow">Matéria · <span class="js-bim-label">1º</span> bimestre</p>
+          <h2 id="modal-informatica-title">Informática</h2>
+          <p class="modal-sub"><i class="fa-regular fa-user"></i>Professores: Carlos Wilton e Kleber Jose</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- 1º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="1">
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Informática no 1º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">1º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 2º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="2" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Informática no 2º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">2º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 3º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="3" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Informática no 3º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">3º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- 4º BIMESTRE -->
+        <div class="bimestre-panel" data-bimestre="4" hidden>
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Fundamentos Teóricos</h3>
+            <p class="modal-question">Resuma as principais teorias, conceitos e metodologias aprendidas.</p>
+            <p class="modal-answer">Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em
+              Informática no 4º bimestre.</p>
+          </section>
+
+          <section class="modal-section">
+            <h3><span class="tag">4º Bimestre</span>Participação em Sala de Aula</h3>
+
+            <div class="qa">
+              <p class="modal-question">Resuma os principais temas discutidos em sala de aula. O que mais chamou sua
+                atenção?</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou
+                colegas que tenha ajudado no seu aprendizado.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+
+            <div class="qa">
+              <p class="modal-question">Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.</p>
+              <p class="modal-answer">Escreva aqui sua resposta.</p>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Informática-->
+
+  <!-- =====================================================================
+     MODAIS DE PROJETOS ("Meu papel")
+     Para trocar uma imagem, substitua o bloco:
+       <div class="evidence-placeholder">...</div>
+     por:
+       <img src="assets/SUANOVAIMAGEM.jpg" alt="Descrição da imagem">
+     mantendo a <figcaption> com a legenda logo abaixo.
+     ===================================================================== -->
+
+  <div class="modal" id="modal-tecnologia" data-modal-panel>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-tecnologia-title">
+      <button type="button" class="modal-close" data-close aria-label="Fechar"><i
+          class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-microchip"></i></div>
+        <div>
+          <p class="modal-eyebrow">Projeto</p>
+          <h2 id="modal-tecnologia-title">Amostra Tecnológica</h2>
+          <p class="modal-sub">Meu papel no projeto</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <section class="modal-section">
+          <h3>Minha Atuação</h3>
+          <p class="modal-question">Descreva atividades práticas, trabalhos e pesquisas realizadas.</p>
+          <p class="modal-answer">Escreva aqui o que você fez na Amostra Tecnológica: pesquisas, montagem, programação,
+            apresentação etc.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Evidências Visuais</h3>
+          <p class="modal-question">Insira materiais e imagens produzidos, com uma breve descrição de cada um.</p>
+
+          <div class="evidence-grid">
+            <figure class="evidence-item">
+              <div class="evidence-placeholder"><i class="fa-regular fa-image"></i></div>
+              <figcaption>Descreva aqui a imagem 1.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <div class="evidence-placeholder"><i class="fa-regular fa-image"></i></div>
+              <figcaption>Descreva aqui a imagem 2.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <div class="evidence-placeholder"><i class="fa-regular fa-image"></i></div>
+              <figcaption>Descreva aqui a imagem 3.</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-festival" data-modal-panel>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-festival-title">
+      <button type="button" class="modal-close" data-close aria-label="Fechar"><i
+          class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-palette"></i></div>
+        <div>
+          <p class="modal-eyebrow">Projeto</p>
+          <h2 id="modal-festival-title">Festival de Arte e Cultura</h2>
+          <p class="modal-sub">Meu papel no projeto</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <section class="modal-section">
+          <h3>Minha Atuação</h3>
+          <p class="modal-question">Descreva atividades práticas, trabalhos e pesquisas realizadas.</p>
+          <p class="modal-answer">Escreva aqui o que você fez no Festival de Arte e Cultura: apresentação, organização,
+            produção etc.</p>
+        </section>
+
+        <section class="modal-section">
+          <h3>Evidências Visuais</h3>
+          <p class="modal-question">Insira materiais e imagens produzidos, com uma breve descrição de cada um.</p>
+
+          <div class="evidence-grid">
+            <figure class="evidence-item">
+              <div class="evidence-placeholder"><i class="fa-regular fa-image"></i></div>
+              <figcaption>Descreva aqui a imagem 1.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <div class="evidence-placeholder"><i class="fa-regular fa-image"></i></div>
+              <figcaption>Descreva aqui a imagem 2.</figcaption>
+            </figure>
+            <figure class="evidence-item">
+              <div class="evidence-placeholder"><i class="fa-regular fa-image"></i></div>
+              <figcaption>Descreva aqui a imagem 3.</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

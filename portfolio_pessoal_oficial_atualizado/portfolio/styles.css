@@ -1,0 +1,988 @@
+/* =========================================================
+   PORTFÓLIO — THEODOR FAGUNDES
+   Paleta e tipografia unificadas a partir da seção Home
+   ========================================================= */
+
+:root{
+  --bg:#000000;
+  --star:#F5F5F2;
+  --dim:#8A8A92;
+  --line:rgba(245,245,242,0.14);
+  --violet:#7C6CF6;
+  --cyan:#33D6C0;
+  --panel:#0A0A0D;
+  --panel-2:#0F0F14;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+html,body{
+  background:var(--bg);
+  color:var(--star);
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+body.modal-open{
+  overflow:hidden;
+}
+
+a{color:inherit;text-decoration:none;}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer;}
+::selection{background:var(--violet);color:#000;}
+
+/* ---------- CANVAS DE PARTÍCULAS (fundo único de toda a página) ---------- */
+#universe{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  display:block;
+  pointer-events:none;
+}
+
+/* ---------- HEADER FIXO ---------- */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:26px 48px;
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  background:linear-gradient(to bottom, rgba(0,0,0,0.55), transparent);
+}
+
+.logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:0.02em;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--star);
+}
+
+.logo .dot{
+  width:7px;height:7px;border-radius:50%;
+  background:linear-gradient(135deg,var(--violet),var(--cyan));
+  box-shadow:0 0 10px var(--violet);
+  display:inline-block;
+}
+
+nav{display:flex;gap:38px;}
+
+nav a{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--dim);
+  position:relative;
+  padding-bottom:4px;
+  transition:color .35s ease;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  left:0;bottom:0;
+  width:0%;
+  height:1px;
+  background:linear-gradient(90deg,var(--violet),var(--cyan));
+  transition:width .35s ease;
+}
+
+nav a:hover,
+nav a.active{color:var(--star);}
+nav a:hover::after,
+nav a.active::after{width:100%;}
+
+/* ---------- MAIN / SEÇÕES ---------- */
+main{
+  position:relative;
+  z-index:5;
+}
+
+/* ===================== 1. HOME ===================== */
+.section-home{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:140px 48px 80px;
+}
+
+.stage{
+  width:100%;
+  max-width:1180px;
+  display:grid;
+  grid-template-columns:1.15fr 0.85fr;
+  gap:90px;
+  align-items:center;
+  margin:0 auto;
+}
+
+.profile{
+  display:flex;
+  gap:44px;
+  align-items:flex-start;
+}
+
+.avatar-block{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+  flex-shrink:0;
+}
+
+.avatar{
+  width:150px;height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--line);
+  box-shadow:0 0 0 6px rgba(124,108,246,0.06), 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.avatar-caption{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+
+.bio{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  padding-top:6px;
+}
+
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--cyan);
+}
+
+.bio h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:clamp(28px,3.2vw,42px);
+  line-height:1.1;
+  letter-spacing:-0.01em;
+}
+
+.bio h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:400;
+  font-size:17px;
+  color:var(--dim);
+  letter-spacing:0.01em;
+}
+
+.bio p{
+  font-size:15px;
+  line-height:1.75;
+  color:#C9C9D1;
+  max-width:46ch;
+}
+
+.feature{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
+
+.frame{
+  width:100%;
+  max-width:340px;
+  aspect-ratio:1/1;
+  position:relative;
+  border-radius:6px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 30px 70px rgba(0,0,0,0.65);
+}
+
+.frame img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(1.05) contrast(1.02);
+}
+
+.frame::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(160deg, rgba(124,108,246,0.10), transparent 40%);
+  pointer-events:none;
+}
+
+.feature-caption{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+
+/* Indicador de rolagem no fim da Home */
+.scroll-hint{
+  position:absolute;
+  bottom:36px;
+  left:50%;
+  transform:translateX(-50%);
+  width:26px;height:42px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  display:flex;
+  justify-content:center;
+  padding-top:8px;
+}
+
+.scroll-hint span{
+  width:4px;height:8px;
+  border-radius:2px;
+  background:linear-gradient(180deg,var(--violet),var(--cyan));
+  animation:scrollDot 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDot{
+  0%{opacity:0; transform:translateY(0);}
+  30%{opacity:1;}
+  100%{opacity:0; transform:translateY(14px);}
+}
+
+/* ===================== SEÇÕES GENÉRICAS (Matérias / Projetos / Reflexão) ===================== */
+.section-block{
+  position:relative;
+  padding:120px 6% 40px;
+  max-width:1300px;
+  margin:0 auto;
+}
+
+.titulo{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.titulo h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:clamp(38px,6vw,64px);
+  margin-bottom:16px;
+  background:linear-gradient(90deg,var(--star),var(--cyan));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.titulo p{
+  font-size:clamp(15px,1.6vw,19px);
+  color:var(--dim);
+  max-width:640px;
+  margin:0 auto;
+}
+
+/* ---------- CARDS (Matérias / Projetos) ---------- */
+.cards{
+  width:100%;
+  display:grid;
+  gap:32px;
+  justify-items:stretch;
+}
+
+.cards-materias{
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+}
+
+.cards-projetos{
+  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+}
+
+.card{
+  width:100%;
+  max-width:340px;
+  margin:0 auto;
+  padding:36px;
+  border-radius:22px;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.45);
+  transition:transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.cards-materias .card{
+  min-height:300px;
+  cursor:pointer;
+  font-family:inherit;
+  justify-content:flex-start;
+}
+
+.cards-materias .card:hover,
+.cards-materias .card:focus-visible{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 30px 60px rgba(0,0,0,0.6);
+  border-color:rgba(255,255,255,0.5);
+}
+
+.cards-materias .card:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:4px;
+}
+
+.cards-projetos .card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 30px 60px rgba(0,0,0,0.6);
+}
+
+.card .icone{
+  width:78px;height:78px;
+  margin:0 auto 24px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  background:rgba(255,255,255,0.12);
+  flex-shrink:0;
+}
+
+.card h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:26px;
+  margin-bottom:6px;
+}
+
+.card hr{
+  border:none;
+  height:2px;
+  width:100%;
+  margin:20px 0;
+  background:rgba(255,255,255,0.2);
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.7;
+  color:rgba(245,245,242,0.9);
+}
+
+/* dica visual de que o card de matéria é clicável */
+.card-hint{
+  margin-top:auto;
+  padding-top:22px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11.5px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--cyan);
+  opacity:0.85;
+  transition:gap .3s ease, opacity .3s ease;
+}
+
+.card-hint i{
+  font-size:11px;
+  transition:transform .3s ease;
+}
+
+.cards-materias .card:hover .card-hint,
+.cards-materias .card:focus-visible .card-hint{
+  opacity:1;
+  gap:12px;
+}
+
+.cards-materias .card:hover .card-hint i,
+.cards-materias .card:focus-visible .card-hint i{
+  transform:translateX(3px);
+}
+
+.card .botao{
+  display:inline-block;
+  margin-top:24px;
+  padding:12px 30px;
+  border-radius:50px;
+  font-weight:600;
+  font-size:14px;
+  color:var(--star);
+  background:rgba(255,255,255,0.14);
+  border:1px solid rgba(255,255,255,0.25);
+  transition:.3s;
+  cursor:pointer;
+}
+
+.card .botao:hover,
+.card .botao:focus-visible{
+  background:var(--star);
+  color:#111;
+}
+
+.card .botao:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+}
+
+/* Identidade de cor por matéria — tons alinhados à paleta violeta/ciano */
+.matematica{ background:linear-gradient(145deg,#3a2e73,#1c1533); border:1px solid rgba(124,108,246,0.45); }
+.linguagens{ background:linear-gradient(145deg,#5a2e73,#2a1533); border:1px solid rgba(179,0,255,0.35); }
+.humanas   { background:linear-gradient(145deg,#0f5b57,#0a2e2c); border:1px solid rgba(51,214,192,0.45); }
+.natureza  { background:linear-gradient(145deg,#1f5c2a,#123016); border:1px solid rgba(126,255,0,0.3); }
+
+.tecnologia{ background:linear-gradient(145deg,#3f2e8f,#1c1745); border:1px solid rgba(124,108,246,0.5); }
+.festival  { background:linear-gradient(145deg,#7a4a1f,#3a2410); border:1px solid rgba(255,183,3,0.35); }
+.card.informatica {
+    border-color: hsl(180, 100%, 100%);
+}
+
+.card.informatica .icone {
+    color: #00f3b2;
+}
+
+/* ---------- LINHA DO TEMPO / REFLEXÃO ---------- */
+.timeline{
+  position:relative;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.timeline::after{
+  content:'';
+  position:absolute;
+  width:2px;
+  background:linear-gradient(180deg,var(--violet),var(--cyan));
+  top:0;bottom:0;
+  left:50%;
+  margin-left:-1px;
+}
+
+.timeline .container{
+  position:relative;
+  width:50%;
+  padding:20px 44px;
+}
+
+.timeline .left{left:0;}
+.timeline .right{left:50%;}
+
+.timeline .content{
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:28px;
+  border-radius:14px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.timeline .content h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:20px;
+  margin-bottom:16px;
+  color:var(--star);
+}
+
+.timeline .content li{
+  margin:10px 0;
+  line-height:1.7;
+  font-size:14.5px;
+  color:#C9C9D1;
+  list-style:none;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer{
+  position:relative;
+  z-index:5;
+  text-align:center;
+  padding:40px 20px 50px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13px;
+  letter-spacing:0.06em;
+  color:var(--dim);
+  border-top:1px solid var(--line);
+}
+
+/* ===================== MODAIS (Matérias / Projetos) ===================== */
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:none;
+  align-items:flex-start;
+  justify-content:center;
+  padding:90px 20px 40px;
+  overflow-y:auto;
+}
+
+.modal.is-open{
+  display:flex;
+}
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(4,4,8,0.78);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+
+.modal-box{
+  position:relative;
+  width:100%;
+  max-width:680px;
+  background:linear-gradient(160deg, var(--panel-2), var(--panel));
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:0 40px 90px rgba(0,0,0,0.7);
+  padding:44px;
+  opacity:0;
+  transform:translateY(24px) scale(0.98);
+  transition:opacity .3s ease, transform .3s ease;
+}
+
+.modal.is-open .modal-box{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+.modal-close{
+  position:absolute;
+  top:20px;right:20px;
+  width:38px;height:38px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--line);
+  color:var(--star);
+  font-size:15px;
+  transition:.25s;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible{
+  background:var(--star);
+  color:#111;
+}
+
+.modal-header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding-right:40px;
+  margin-bottom:32px;
+}
+
+.modal-icon{
+  width:60px;height:60px;
+  flex-shrink:0;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  background:linear-gradient(145deg, rgba(124,108,246,0.35), rgba(51,214,192,0.2));
+  border:1px solid var(--line);
+}
+
+.modal-eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--cyan);
+  margin-bottom:4px;
+}
+
+.modal-header h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:clamp(22px,3vw,28px);
+  line-height:1.15;
+}
+
+.modal-sub{
+  margin-top:6px;
+  font-size:13.5px;
+  color:var(--dim);
+}
+
+.modal-body{
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+
+.modal-section h3{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:17px;
+  margin-bottom:16px;
+  color:var(--star);
+}
+
+.modal-section .tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#0A0A0D;
+  background:linear-gradient(90deg,var(--violet),var(--cyan));
+  padding:4px 10px;
+  border-radius:50px;
+}
+
+.qa{margin-bottom:20px;}
+.qa:last-child{margin-bottom:0;}
+
+.modal-question{
+  font-size:14.5px;
+  font-weight:600;
+  color:#DDDDE4;
+  margin-bottom:8px;
+  line-height:1.6;
+}
+
+.modal-answer{
+  font-size:14.5px;
+  line-height:1.75;
+  color:var(--dim);
+  background:rgba(255,255,255,0.03);
+  border:1px dashed var(--line);
+  border-radius:12px;
+  padding:16px 18px;
+}
+
+/* ---------- Evidências visuais (imagens dos projetos) ---------- */
+.evidence-grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+
+.evidence-item{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.evidence-item img,
+.evidence-placeholder{
+  width:100%;
+  aspect-ratio:4/3;
+  border-radius:12px;
+  object-fit:cover;
+  border:1px dashed var(--line);
+}
+
+.evidence-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:var(--dim);
+  background:rgba(255,255,255,0.03);
+}
+
+.evidence-item figcaption{
+  font-size:12.5px;
+  line-height:1.5;
+  color:var(--dim);
+  text-align:center;
+}
+
+/* ===================== ANIMAÇÕES DE SCROLL ===================== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* efeito escalonado para os cards dentro de cada seção */
+.cards .card.reveal{transition-delay:var(--delay, 0s);}
+.timeline .container.reveal{transition-delay:var(--delay, 0s);}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width:880px){
+  header{padding:20px 24px;}
+  nav{gap:22px;}
+
+  .section-home{padding:120px 24px 60px;}
+  .stage{grid-template-columns:1fr; gap:64px;}
+  .profile{flex-direction:column; align-items:center; text-align:center; gap:26px;}
+  .bio{align-items:center;}
+  .bio p{max-width:52ch;}
+
+  .section-block{padding:100px 6% 30px;}
+
+  .timeline::after{left:25px;}
+  .timeline .container,
+  .timeline .left,
+  .timeline .right{
+    width:100%;
+    left:0;
+    padding-left:64px;
+    padding-right:12px;
+  }
+
+  .modal{padding:80px 16px 32px;}
+  .modal-box{padding:32px 24px;border-radius:18px;}
+  .modal-header{gap:14px;margin-bottom:26px;}
+  .modal-icon{width:50px;height:50px;font-size:20px;border-radius:13px;}
+  .evidence-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width:520px){
+  .card{padding:28px 24px;}
+  .modal-close{top:14px;right:14px;width:34px;height:34px;font-size:13px;}
+  .modal-header{padding-right:34px;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important; animation:none !important;}
+  .reveal{opacity:1; transform:none;}
+}
+
+/* ===================== 2.5 CÓDIGOS (vídeo + bloco de código) ===================== */
+.codigos-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+.codigos-box{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:26px;
+}
+
+.codigos-box h3{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:17px;
+  margin-bottom:18px;
+  color:var(--star);
+}
+
+.codigos-box h3 i{ color:var(--cyan); }
+
+/* --- vídeo --- */
+.video-input-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.video-input-row input{
+  flex:1;
+  padding:11px 14px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:var(--panel-2);
+  color:var(--star);
+  font-size:14px;
+  font-family:'Inter',sans-serif;
+}
+
+.video-input-row input:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:2px;
+}
+
+.video-frame{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--panel-2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.video-frame iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.video-placeholder{
+  color:var(--dim);
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-align:center;
+  padding:0 20px;
+}
+
+/* --- bloco de código --- */
+.code-toolbar{
+  display:flex;
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.code-textarea{
+  width:100%;
+  min-height:320px;
+  resize:vertical;
+  padding:18px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:var(--panel-2);
+  color:#D7F7EF;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13.5px;
+  line-height:1.6;
+  tab-size:2;
+}
+
+.code-textarea:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:2px;
+}
+
+/* botão pequeno reutilizável (vídeo e código) */
+.botao-mini{
+  padding:9px 16px;
+  border-radius:50px;
+  font-weight:600;
+  font-size:13px;
+  color:var(--star);
+  background:rgba(255,255,255,0.10);
+  border:1px solid rgba(255,255,255,0.22);
+  cursor:pointer;
+  transition:.3s;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+.botao-mini:hover,
+.botao-mini:focus-visible{
+  background:var(--star);
+  color:#111;
+}
+
+.botao-mini:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+}
+
+@media (max-width:860px){
+  .codigos-wrap{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===================== FILTRO DE BIMESTRE (Matérias) ===================== */
+.bimestre-filter{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:0 auto 40px;
+}
+
+.bimestre-filter-label{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-right:6px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11.5px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+
+.bimestre-btn{
+  min-width:56px;
+  padding:10px 20px;
+  border-radius:50px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.05em;
+  color:var(--star);
+  background:rgba(255,255,255,0.06);
+  border:1px solid var(--line);
+  cursor:pointer;
+  transition:background .3s ease, color .3s ease, border-color .3s ease, transform .3s ease;
+}
+
+.bimestre-btn:hover{
+  border-color:rgba(255,255,255,0.4);
+  transform:translateY(-2px);
+}
+
+.bimestre-btn:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+}
+
+.bimestre-btn.is-active{
+  color:#0A0A0D;
+  background:linear-gradient(90deg,var(--violet),var(--cyan));
+  border-color:transparent;
+}
+
+/* painéis de conteúdo por bimestre dentro dos modais */
+.bimestre-panel{
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+.bimestre-panel[hidden]{display:none;}
+
+/* pequeno "pulso" nos cards quando o bimestre muda */
+.cards-materias.is-switching .card{
+  animation:bimPulse .45s ease;
+}
+@keyframes bimPulse{
+  0%{transform:scale(1);}
+  40%{transform:scale(0.97);}
+  100%{transform:scale(1);}
+}
+
+@media (max-width:520px){
+  .bimestre-filter-label{width:100%; justify-content:center; margin:0 0 4px;}
+}
