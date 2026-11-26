@@ -1,0 +1,602 @@
+[
+  {
+    "nome": "Matemática",
+    "classe": "matematica",
+    "icone": "fa-solid fa-calculator",
+    "professores": "Professor: Roumel",
+    "bimestres": {
+      "1": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resumo as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "No primeiro bimestre aprendemos contagens e técnicas de contagem, binômio de newton, noções de probabilidade, cálculo de probabilidade.."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resumo os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Noções de probabilidade foi um assunto pelo qual me interessei muito, já que costuma cair no enem."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Neste bimestre foram passadas diversas atividades do livro e também uma atividade de apresentar um slide para resolver um desafio aonde eu e meu grupo apresentamos sobre IA sustentável."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Probabilidade é ultlizada para diversas coisas do dia a dia e podem agregar muito em profissões diversas a sua ultlização."
+            }
+          ]
+        }
+      ],
+      "2": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "No segundo bimestre trabalhamos Caderno 09 (capítulos 01, 02, 03 e 04)caderno 10 (capítulos 01 e 02), que foram basicamente os mesmos assuntos do 1° bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "No segundo bimestre trabalhamos mais a Amostra Tecnológica então o meu objetivo principal foi focar nela."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Tivemos uma atividade sobre os costumes africanos e a matemática, eu e meu grupo mostramos como os povos africanos ultlizavam a medida em suas receitas típicas, e na amostra Tecnológica aprendemos mais sobre pessoas neurodivergentes e estudamos para aplicar coisas acessíveis em nosso site."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "No meu cotidiano entendi mais como as pessoas neurodivergentes vivem."
+            }
+          ]
+        }
+      ],
+      "3": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Capítulo 1. Introdução a programação; Capítulo 2 Introdução a geometria analítica- Estudo do ponto; Capítulo 3 - Estudo da reta; Capítulo 4 - Estudo das cônicas."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Geometria analítica foi um conteúdo extremamente importante que pude aprender de maneira singela"
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Nosso professor de matemática Romel costuma fazer perguntas e ter uma aula mais visual para seus alunos, isso me ajudou bastante para aprender geometria analítica.."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Estudo da reta e geometria é algo que pode me ajudar muito na programação e na área que desejo seguir (engenharia da computação)."
+            }
+          ]
+        }
+      ],
+      "4": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Os temas discutidos no 4° bimestre foram praticamente os mesmos temas do 3° (geometria analítica, formula do baricêntro, estudo do ponto e etc)."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "4° bimestre foi um bimestre focado no FACS aonde focamos em realizar nosso curta-, também para o oscar."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Tivemos o FACS aonde buscamos estudar sobre o livro 'Capitães de Areia'."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Aprendi mais sobre as fórmulas de geometria analítica e baricêntro."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "nome": "Linguagens",
+    "classe": "linguagens",
+    "icone": "fa-regular fa-comments",
+    "professores": "Professoras: Milena e Islane",
+    "bimestres": {
+      "1": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Leitura e interpretação textual, leitura barroca, concordância nominal, redação."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Leitura barroca é um assunto pelo qual eu possuo muito interesse."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Discutindo sobre concordância nominal que é um assunto que eu ainda sinto dificuldade e preciso estudar mais para conseguir domínio."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Leitura e interpretação textual vai ser sempre ultlizado no dia a dia e é extremamente importante para as pessoas e seu senso crítico."
+            }
+          ]
+        }
+      ],
+      "2": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Caderno 09 completo e caderno 10 (capítulos 1 e 2)."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "No segundo bimestre trabalhamos mais a Amostra Tecnológica então o meu objetivo principal foi focar nela."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Tivemos breve atividades passadas em sala sobre o mesmo assunto do 1° bimestre e focamos na Amostra."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Com base que neste bimestre tivemos a Amostra tecnólogica, aprendemos mais sobre as pessoas neurodivergentes."
+            }
+          ]
+        }
+      ],
+      "3": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Livro 11 todos os capítulos Leitura e interpretação textual; Uso dos porquês; Figura de linguagem; Redação."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Uso dos porquês acredito que seja algo essencial no português brasileiro."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Tivemos uma atividade para aprender por completo como ultlizar os porquês nas frases."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Figura de linguagem é extremamente nescessário para o dia a dia."
+            }
+          ]
+        }
+      ],
+      "4": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Nosso 4° bimestre atualmente está sendo focado no FACS e no Oscar que serão de 'Capitães de Areia' mas támbem estamos focando bastante em redação em busca de bons resultado no ENEM."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Estamos discutindo propostas para o curta-metragem e recebendo muita ajuda para o ENEM."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "A professora Milena apresentou sobre o cinema em sua sala de aula, e a professora Islane nos mostrou diversas propostas de estudos para a redação do ENEM."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Aprender sobre o cinema nos traz uma pespectiva diferente dos filmes e ter teses para o ENEM nos auxilia muito."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "nome": "Humanas",
+    "classe": "humanas",
+    "icone": "fa-solid fa-users",
+    "professores": "Professores: Wilson e Paulo Nobre",
+    "bimestres": {
+      "1": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Humanas no 1º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "2": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Humanas no 2º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "3": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Humanas no 3º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "4": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Humanas no 4º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "nome": "Naturezas",
+    "classe": "natureza",
+    "icone": "fa-solid fa-leaf",
+    "professores": "Professores: Jeanynne, Marcos Alves e Marcos César",
+    "bimestres": {
+      "1": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Naturezas no 1º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "2": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Naturezas no 2º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "3": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Naturezas no 3º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "4": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Naturezas no 4º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "nome": "Informática",
+    "classe": "informatica",
+    "icone": "fa-solid fa-laptop-code",
+    "professores": "Professores: Carlos Wilton e Kleber Jose",
+    "bimestres": {
+      "1": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Informática no 1º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "2": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Informática no 2º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "3": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Informática no 3º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ],
+      "4": [
+        {
+          "titulo": "Fundamentos Teóricos",
+          "perguntas": [
+            {
+              "pergunta": "Resuma as principais teorias, conceitos e metodologias aprendidas.",
+              "resposta": "Escreva aqui um resumo das principais teorias, conceitos e metodologias trabalhadas em Informática no 4º bimestre."
+            }
+          ]
+        },
+        {
+          "titulo": "Participação em Sala de Aula",
+          "perguntas": [
+            {
+              "pergunta": "Resuma os principais temas discutidos em sala de aula. O que mais chamou sua atenção?",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Mencione alguma atividade, discussão ou exemplo apresentado pelo professor ou colegas que tenha ajudado no seu aprendizado.",
+              "resposta": "Escreva aqui sua resposta."
+            },
+            {
+              "pergunta": "Explique um conceito aprendido e como ele pode ser aplicado no seu cotidiano.",
+              "resposta": "Escreva aqui sua resposta."
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

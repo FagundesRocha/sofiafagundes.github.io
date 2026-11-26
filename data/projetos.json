@@ -1,0 +1,46 @@
+[
+  {
+    "nome": "Amostra Tecnológica",
+    "classe": "tecnologia",
+    "icone": "fa-solid fa-microchip",
+    "descricao": "Evento dedicado à apresentação de projetos de tecnologia, programação, robótica e inovação desenvolvidos pelos alunos.",
+    "pergunta": "Descreva atividades práticas, trabalhos e pesquisas realizadas.",
+    "atuacao": "Neste projeto atuei como líder do meu grupo, trabalhamos uma IA adaptativa para pessoas com TDAH. Geri os grupos, organizei a nossa apresentação, ajudei na criação do protótipo, preparei reuniões, apresentei o projeto e realizei relatórios de pagamento e participação.",
+    "evidencias": [
+      {
+        "imagem": null,
+        "legenda": "Descreva aqui a imagem 1."
+      },
+      {
+        "imagem": null,
+        "legenda": "Descreva aqui a imagem 2."
+      },
+      {
+        "imagem": null,
+        "legenda": "Descreva aqui a imagem 3."
+      }
+    ]
+  },
+  {
+    "nome": "Festival de Arte e Cultura",
+    "classe": "festival",
+    "icone": "fa-solid fa-palette",
+    "descricao": "Celebração da criatividade com apresentações, curta-metragem, artísticas, música, dança, teatro, literatura e exposições culturais.",
+    "pergunta": "Descreva atividades práticas, trabalhos e pesquisas realizadas.",
+    "atuacao": "Participei do curta-metragem na parte da produção, ajudei com a audição dos personagens, gravação do curta, gerei ideias, avaliei os personagens e ajudei na preparação da exposição.",
+    "evidencias": [
+      {
+        "imagem": null,
+        "legenda": "Descreva aqui a imagem 1."
+      },
+      {
+        "imagem": null,
+        "legenda": "Descreva aqui a imagem 2."
+      },
+      {
+        "imagem": null,
+        "legenda": "Descreva aqui a imagem 3."
+      }
+    ]
+  }
+]

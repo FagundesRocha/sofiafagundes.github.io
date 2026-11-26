@@ -1,0 +1,13 @@
+# Dependências (são recriadas com "npm install")
+node_modules/
+
+# Banco de dados SQLite (é recriado sozinho a partir de /data)
+database.sqlite
+
+# Variáveis de ambiente (podem conter a senha do admin)
+.env
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+*.tmp

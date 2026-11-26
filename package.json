@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-fagundes-2026",
+  "version": "1.0.0",
+  "description": "Portfólio escolar com front-end estático e back-end simples (API REST com Node.js, Express, Sequelize e SQL).",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.6",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1"
+  },
+  "license": "ISC"
+}

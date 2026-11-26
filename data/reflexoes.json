@@ -1,0 +1,41 @@
+[
+  {
+    "titulo": "Reflexão Crítica",
+    "itens": [
+      {
+        "rotulo": "Aprendizado Acadêmico",
+        "texto": "Desenvolvi maior senso de responsabilidade e aprendi a direcionar meus estudos, tornando meu aprendizado mais prático e produtivo."
+      },
+      {
+        "rotulo": "Aplicação Prática",
+        "texto": "Ter um foco mais objetivo e gerar mais resultado."
+      },
+      {
+        "rotulo": "Melhorias Necessárias",
+        "texto": "Devo dimunuir minha procastinação e aumentar minha criatividade e confiança."
+      },
+      {
+        "rotulo": "Sugestão Adicional",
+        "texto": "A grande gestão de trabalhos e provas era cansativa, então tive que aprimorar minha flexibilidade para conseguir lidar com tudo."
+      }
+    ]
+  },
+  {
+    "titulo": "Conexões Interdisciplinares",
+    "itens": [
+      {
+        "rotulo": "Relações Interdisciplinares",
+        "texto": "Em informática por exemplo aprendemos que a programação não é baseada somente em códigos e sim em solucionar problemas de forma prática, flúida e automatizada."
+      }
+    ]
+  },
+  {
+    "titulo": "Aprendizados da Escola para a Vida",
+    "itens": [
+      {
+        "rotulo": "Reflexão sobre Experiências",
+        "texto": "Acho que a escola melhora principalmente nossa visão sobre as pessoas é um espaço aonde devemos aprender, entender e respeitar para assim trabalhar junto até chegar em um resultado positivo."
+      }
+    ]
+  }
+]

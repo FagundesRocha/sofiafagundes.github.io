@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theodor Fagundes — Portfólio</title>
+
+  <!-- ENDEREÇO DA API (back-end).
+       Deixe vazio ("") quando o site e a API estão no MESMO servidor (o normal).
+       Se o site ficar em outro lugar (ex.: GitHub Pages), coloque aqui o endereço
+       do servidor, sem barra no final. Ex.: content="https://meu-portfolio.onrender.com" -->
+  <meta name="api-base" content="">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Ícones (usados em Matérias e Projetos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Fundo de partículas interativo, cobre o site inteiro (position:fixed) -->
+  <canvas id="universe"></canvas>
+
+  <!-- ================= HEADER / NAV FIXO ================= -->
+  <header>
+    <div class="logo"><span class="dot"></span>Theodor Fagundes</div>
+    <nav>
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#materias" class="nav-link" data-section="materias">Matérias</a>
+      <a href="#codigos" class="nav-link" data-section="codigos">Códigos e vídeo</a>
+      <a href="#projetos" class="nav-link" data-section="projetos">Projetos</a>
+      <a href="#reflexao" class="nav-link" data-section="reflexao">Anuais</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= 1. HOME (HERO) ================= -->
+    <section id="home" class="section-home">
+      <div class="stage">
+
+        <div class="profile">
+          <div class="avatar-block">
+            <img class="avatar" src="assets/fotopessoal.webp" alt="Foto de perfil de Theodor Fagundes">
+            <span class="avatar-caption">Esse sou eu</span>
+          </div>
+
+          <div class="bio">
+            <span class="eyebrow">Turma 3º D — Informática</span>
+            <h1>Theodor Fagundes</h1>
+            <h2>Técnico em Informática, desenvolvedor e lutador.</h2>
+            <p>Sonho em crescer profissionalmente na área de tecnologia, busco graduações e conhecimento, quero conhecer
+              o mundo, realizar meus sonhos e ter a liberdade de ser quem sou.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="frame">
+            <img src="assets/capa.webp" alt="Capa do álbum em destaque">
+          </div>
+          <span class="feature-caption">Sabotage</span>
+        </div>
+
+      </div>
+
+      <a href="#materias" class="scroll-hint" aria-label="Rolar para Matérias">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ================= 2. MATÉRIAS ================= -->
+    <section id="materias" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Matérias</h1>
+        <p>Meu desempenho em cada matéria. Clique em um card para ver os
+          detalhes.</p>
+      </div>
+
+      <!-- Filtro de bimestre: define qual bimestre aparece nos cards e nos modais -->
+      <div class="bimestre-filter" role="group" aria-label="Filtrar por bimestre">
+        <span class="bimestre-filter-label"><i class="fa-regular fa-calendar"></i> Bimestre</span>
+        <button type="button" class="bimestre-btn is-active" data-bimestre="1" aria-pressed="true">1º</button>
+        <button type="button" class="bimestre-btn" data-bimestre="2" aria-pressed="false">2º</button>
+        <button type="button" class="bimestre-btn" data-bimestre="3" aria-pressed="false">3º</button>
+        <button type="button" class="bimestre-btn" data-bimestre="4" aria-pressed="false">4º</button>
+      </div>
+
+      <div class="cards cards-materias" id="lista-materias">
+        <!-- Os cards são criados pelo script.js com os dados da API (GET /api/materias).
+             Para editar o conteúdo, altere o arquivo data/materias.json -->
+        <p class="estado-api">Carregando matérias…</p>
+      </div>
+    </section>
+
+    <!-- ================= 2.5 CÓDIGOS ================= -->
+    <section id="codigos" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Códigos e vídeo</h1>
+        <p>Espaço para exibir um vídeo em destaque e guardar trechos de códigos importantes que realizei durante o ano letivo.</p>
+      </div>
+
+      <div class="codigos-wrap">
+
+        <!-- Vídeo fixo (YouTube, não listado) -->
+        <div class="codigos-box video-box">
+          <h3><i class="fa-solid fa-video"></i> Vídeo</h3>
+
+          <div class="video-frame" id="videoFrame">
+            <iframe src="https://www.youtube.com/embed/Fh2_u6Z6CiY" title="Vídeo do portfólio" loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Código fixo (somente leitura) -->
+        <div class="codigos-box code-box">
+          <h3><i class="fa-solid fa-code"></i> Código</h3>
+
+          <div class="code-toolbar">
+            <button type="button" id="copyCodeBtn" class="botao-mini"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+
+          <pre class="code-textarea" id="codeArea" tabindex="0"><code>//comentário: código controller classificação projeto jes
+
+const classificacaoService = require(&#x27;../services/classificacaoService&#x27;);
+const asyncHandler = require(&#x27;../utils/asyncHandler&#x27;);
+
+async function porModalidade(req, res) {
+  const { modalidadeId } = req.params;
+  const { genero } = req.query;
+  const classificacao = await classificacaoService.obterClassificacao(modalidadeId, genero || null);
+  return res.json(classificacao);
+}
+
+async function geral(req, res) {
+  const pontuacaoGeral = await classificacaoService.obterPontuacaoGeral();
+  return res.json(pontuacaoGeral);
+}
+
+module.exports = { porModalidade: asyncHandler(porModalidade), geral: asyncHandler(geral) };
+</code></pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 3. PROJETOS ================= -->
+    <section id="projetos" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Projetos</h1>
+        <p>Principais projetos desenvolvidos pelos estudantes durante o ano letivo.</p>
+      </div>
+
+      <div class="cards cards-projetos" id="lista-projetos">
+        <!-- Criados pelo script.js com os dados da API (GET /api/projetos).
+             Para editar o conteúdo, altere o arquivo data/projetos.json -->
+        <p class="estado-api">Carregando projetos…</p>
+      </div>
+    </section>
+
+    <!-- ================= 4. LINHA DO TEMPO / REFLEXÃO ================= -->
+    <section id="reflexao" class="section-block reveal">
+
+      <div class="titulo">
+        <h1>Últimos detalhes</h1>
+        <p>Reflexões e aprendizados construídos ao longo do ano letivo.</p>
+      </div>
+
+      <div class="timeline" id="lista-reflexoes">
+        <!-- Criada pelo script.js com os dados da API (GET /api/reflexoes).
+             Para editar o conteúdo, altere o arquivo data/reflexoes.json -->
+        <p class="estado-api">Carregando reflexões…</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer reveal">
+    Portfólio Theodor Fagundes — 3° D — Informática.
+  </footer>
+
+  <!-- =====================================================================
+     MODAIS (pop-ups de matérias e projetos)
+     São criados pelo script.js a partir dos dados da API, dentro desta div.
+     Conteúdo das matérias ........ data/materias.json
+     Conteúdo dos projetos ........ data/projetos.json
+     (para trocar uma imagem de evidência, veja o README.md)
+     ===================================================================== -->
+  <div id="modais"></div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
