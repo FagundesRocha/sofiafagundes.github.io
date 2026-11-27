@@ -8,16 +8,16 @@
     "atuacao": "Neste projeto atuei como líder do meu grupo, trabalhamos uma IA adaptativa para pessoas com TDAH. Geri os grupos, organizei a nossa apresentação, ajudei na criação do protótipo, preparei reuniões, apresentei o projeto e realizei relatórios de pagamento e participação.",
     "evidencias": [
       {
-        "imagem": null,
-        "legenda": "Descreva aqui a imagem 1."
+        "imagem": "assets/amostra1.jpeg",
+        "legenda": "Slide apresentação."
       },
       {
-        "imagem": null,
-        "legenda": "Descreva aqui a imagem 2."
+        "imagem": "assets/amostra2.jpeg",
+        "legenda": "Home do site desenvolvido."
       },
       {
-        "imagem": null,
-        "legenda": "Descreva aqui a imagem 3."
+        "imagem": "assets/amostra3.jpeg",
+        "legenda": "Falas e doc de apresentação."
       }
     ]
   },
@@ -30,16 +30,16 @@
     "atuacao": "Participei do curta-metragem na parte da produção, ajudei com a audição dos personagens, gravação do curta, gerei ideias, avaliei os personagens e ajudei na preparação da exposição.",
     "evidencias": [
       {
-        "imagem": null,
-        "legenda": "Descreva aqui a imagem 1."
+        "imagem": "assets/facs1.jpeg",
+        "legenda": "Foto minha nas gravações cena 1."
       },
       {
-        "imagem": null,
-        "legenda": "Descreva aqui a imagem 2."
+        "imagem": "assets/facs2.jpeg",
+        "legenda": "Foto minha nas gravações cena 2."
       },
       {
-        "imagem": null,
-        "legenda": "Descreva aqui a imagem 3."
+        "imagem": "assets/facs3.jpeg",
+        "legenda": "Meu nome nos créditos."
       }
     ]
   }
